@@ -1,0 +1,136 @@
+.water-tracker {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.tracker-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.reset-button {
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reset-button:hover {
+  background: var(--bg-hover);
+  transform: translateY(-1px);
+}
+
+.water-display {
+  margin-bottom: 1.5rem;
+}
+
+.water-count {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.water-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.water-label {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.water-visual {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.water-glass {
+  font-size: 2rem;
+  opacity: 0.3;
+  transition: all 0.3s;
+  transform: scale(0.9);
+}
+
+.water-glass.filled {
+  opacity: 1;
+  transform: scale(1);
+  animation: fillAnimation 0.5s ease-out;
+}
+
+@keyframes fillAnimation {
+  0% {
+    transform: scale(0.8) rotate(-10deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.water-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.add-water-button {
+  flex: 1;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-water-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.add-water-button:active {
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .water-actions {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
